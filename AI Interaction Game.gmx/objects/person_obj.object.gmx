@@ -105,6 +105,7 @@ global.happinesslvl -= perhappy;
             <kind>1</kind>
             <string>fallen = false;
 y -= 10;
+alarm[0] = random_range(30,60)
 </string>
           </argument>
         </arguments>
@@ -376,12 +377,74 @@ if (distance_to_object(mousefollower_obj) &gt; 120 and runningaway = true and fa
     speed = 0;
     alarm[1] = 1;
 }
+
+
+// Makes people go towards apples within their view range.
+
+
+if (instance_number(apple_obj) &gt; 0) {
+    if (global.appledropped = true and distance_to_object(apple_obj) &lt; global.viewrange + perhappy * 2 and x &gt; apple_obj.x + 3) {
+        direction = 180;
+        speed = 2;
+    }
+    
+    if (global.appledropped = true and distance_to_object(apple_obj) &lt; global.viewrange + perhappy * 2 and x &lt; apple_obj.x - 3) {
+        direction = 0;
+        speed = 2;
+    }
+    
+    if (x &gt; apple_obj.x - 3 and x &lt; apple_obj.x + 3) {
+        hspeed = 0;
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="4" ename="apple_obj">
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.appledropped</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -400,6 +463,7 @@ if (distance_to_object(mousefollower_obj) &gt; 120 and runningaway = true and fa
             <kind>1</kind>
             <string>perhappy += 1;
 global.happinesslvl += 1;
+speed = 0;
 </string>
           </argument>
         </arguments>
@@ -415,6 +479,20 @@ global.happinesslvl += 1;
         <functionname>action_kill_object</functionname>
         <codestring></codestring>
         <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
@@ -443,6 +521,7 @@ global.happinesslvl += 1;
     image_speed = 0;
     speed = 4;
     direction = 40;
+    runningaway = false;
     
     alarm[3] = 60;
 }
@@ -454,6 +533,7 @@ if (direction = 180 and fallen = false and global.hidefist = false) {
     image_speed = 0;
     speed = 4;
     direction = 140;
+    runningaway = false;
     
     alarm[3] = 60;
 }

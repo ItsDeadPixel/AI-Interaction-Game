@@ -51,6 +51,7 @@
             <kind>1</kind>
             <string>global.happinesslvl = 0;
 global.selected = 0;
+global.viewrange = 20;
 </string>
           </argument>
         </arguments>

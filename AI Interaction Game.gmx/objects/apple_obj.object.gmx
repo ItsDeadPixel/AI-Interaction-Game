@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>dropping = false;
+
+global.appledropped = false;
 </string>
           </argument>
         </arguments>
@@ -306,6 +308,7 @@ y = mouse_y;
           <argument>
             <kind>1</kind>
             <string>dropping = true;
+global.appledropped = true;
 </string>
           </argument>
         </arguments>
