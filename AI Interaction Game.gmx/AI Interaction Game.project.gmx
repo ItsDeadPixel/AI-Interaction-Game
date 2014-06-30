@@ -24,6 +24,10 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\contoler</object>
+    <objects name="life_objs">
+      <object>objects\life_par</object>
+    </objects>
     <object>objects\ground_obj</object>
     <object>objects\mousefollower_obj</object>
     <object>objects\person_obj</object>
