@@ -368,7 +368,8 @@ if (speed = 0 and sprite_index = prunningleft_spr and fallen = false) {
 
 if (distance_to_object(mousefollower_obj) &lt; 60 and runningaway = false and fallen = false and global.hidefist = false) {
     alarm[2] = 1;
-    instance_create(x,y-16,alert_obj);
+    in = instance_create(x,y-16,alert_obj);
+    in.follow = self.id;
     runningaway = true;
 }
 
