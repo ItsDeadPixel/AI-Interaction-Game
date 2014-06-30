@@ -371,7 +371,7 @@ if (distance_to_object(mousefollower_obj) &lt; 60 and runningaway = false and fa
     runningaway = true;
 }
 
-if (distance_to_object(mousefollower_obj) &gt; 120 and runningaway = true and fallen = false and global.hidefist = false) {
+if (distance_to_object(mousefollower_obj) &gt; 120 and runningaway = true and fallen = false) {
     runningaway = false;
     speed = 0;
     alarm[1] = 1;
