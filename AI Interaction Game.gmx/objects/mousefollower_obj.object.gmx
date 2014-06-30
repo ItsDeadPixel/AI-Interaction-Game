@@ -62,6 +62,10 @@ if (global.hidefist = true) {
 } else {
     image_index = 0;
 }
+
+if (global.selected = 1 and instance_number(apple_obj) &lt; 1) {
+    instance_create(mouse_x,mouse_y,apple_obj)
+}
 </string>
           </argument>
         </arguments>
