@@ -366,14 +366,14 @@ if (speed = 0 and sprite_index = prunningleft_spr and fallen = false) {
 // Makes people run away from the fist
 
 
-if (distance_to_object(mousefollower_obj) &lt; 60 and runningaway = false and fallen = false and global.hidefist = false) {
+if (distance_to_object(mousefollower_obj) &lt; 60-(perhappy/2) and runningaway = false and fallen = false and global.hidefist = false) {
     alarm[2] = 1;
     in = instance_create(x,y-16,alert_obj);
     in.follow = self.id;
     runningaway = true;
 }
 
-if (distance_to_object(mousefollower_obj) &gt; 120 and runningaway = true and fallen = false) {
+if (distance_to_object(mousefollower_obj) &gt; 120-(perhappy/2) and runningaway = true and fallen = false) {
     runningaway = false;
     speed = 0;
     alarm[1] = 1;
@@ -523,8 +523,13 @@ speed = 0;
     speed = 4;
     direction = 40;
     runningaway = false;
-    
     alarm[3] = 60;
+    
+    if (perhappy &gt; 0) {
+        perhappy -= 1;
+        global.happinesslvl -= 1;
+    }
+    
 }
 
 if (direction = 180 and fallen = false and global.hidefist = false) {
@@ -535,8 +540,13 @@ if (direction = 180 and fallen = false and global.hidefist = false) {
     speed = 4;
     direction = 140;
     runningaway = false;
-    
     alarm[3] = 60;
+    
+    if (perhappy &gt; 0) {
+        perhappy -= 1;
+        global.happinesslvl -= 1;
+    }
+    
 }
 </string>
           </argument>
