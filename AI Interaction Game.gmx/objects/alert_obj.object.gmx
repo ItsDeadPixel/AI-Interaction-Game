@@ -71,7 +71,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = self.follow.x;
+            <string>if(instance_exists(self.follow)==true){
+    x = self.follow.x;
+}
+else{
+    instance_destroy();
+}
 draw_self()
 </string>
           </argument>
