@@ -8,7 +8,6 @@
     <sound>sound\Ambience_snd</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\ground_spr</sprite>
     <sprites name="person">
       <sprite>sprites\personlooking_spr</sprite>
       <sprite>sprites\pfallover_spr</sprite>
@@ -16,6 +15,7 @@
       <sprite>sprites\prunningleft_spr</sprite>
       <sprite>sprites\alert_spr</sprite>
     </sprites>
+    <sprite>sprites\ground_spr</sprite>
     <sprite>sprites\fist_spr</sprite>
     <sprite>sprites\cursor_spr</sprite>
     <sprite>sprites\apple_spr</sprite>
