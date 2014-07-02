@@ -477,7 +477,7 @@ if (instance_number(apple_obj) &gt; 0 and perhappy &lt; 100) {
           </argument>
           <argument>
             <kind>0</kind>
-            <string>99</string>
+            <string>9</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -711,6 +711,40 @@ if (direction = 180 and fallen = false and global.hidefist = false) {
 
 if (fallen = true) {
     hspeed = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self()
+
+if(distance_to_point(mouse_x,mouse_y) &lt; 32){
+    draw_roundrect_colour(x-24,y-32,x+24,y-16,c_gray,c_gray,false)
+    draw_roundrect_colour(x-24,y-32,x+24,y-16,c_black,c_black,true)
+    
+    draw_rectangle_colour(x-18,y-24,x-18+((self.perhappy / 10) * 36),y-20,c_green,c_green,c_green,c_green,false)
+    draw_rectangle_colour(x-18,y-24,x+18,y-20,c_black,c_black,c_black,c_black,true)
+    
+    draw_rectangle_colour(x-18,y-28,x-18+((self.perhealth / 100) * 36),y-24,c_orange,c_orange,c_orange,c_orange,false)
+    draw_rectangle_colour(x-18,y-28,x+18,y-24,c_black,c_black,c_black,c_black,true)
 }
 </string>
           </argument>
