@@ -69,14 +69,8 @@ if (global.hidefist = true) {
     image_index = 0;
 }
 
-// Creates tools when tool is selected.
-
 if (global.selected = 1 and instance_number(apple_obj) &lt; 1) {
-    instance_create(mouse_x,mouse_y,apple_obj);
-}
-
-if (global.selected = 2 and instance_number(hovertool_obj) &lt; 1) {
-    instance_create(mouse_x,mouse_y,hovertool_obj);
+    instance_create(mouse_x,mouse_y,apple_obj)
 }
 </string>
           </argument>
