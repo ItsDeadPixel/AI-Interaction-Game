@@ -264,6 +264,8 @@ if (global.selected = 0) {
     draw_sprite(fist_spr,0,view_xview[0]+608,view_yview[0]+32);
 } else if (global.selected = 1) {
     draw_sprite(apple_spr,1,view_xview[0]+608,view_yview[0]+32);
+} else if (global.selected = 2) {
+    draw_sprite(hovertoolicon_spr,1,view_xview[0]+608,view_yview[0]+32);
 }
 </string>
           </argument>

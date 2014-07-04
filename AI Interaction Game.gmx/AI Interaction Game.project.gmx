@@ -20,6 +20,8 @@
     <sprite>sprites\cursor_spr</sprite>
     <sprite>sprites\apple_spr</sprite>
     <sprite>sprites\selectorbox_spr</sprite>
+    <sprite>sprites\hovertoolbox_spr</sprite>
+    <sprite>sprites\hovertoolicon_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -30,6 +32,8 @@
     <object>objects\alert_obj</object>
     <object>objects\controller_obj</object>
     <object>objects\apple_obj</object>
+    <object>objects\hovertool_obj</object>
+    <object>objects\hovertoolbox_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\world</room>
