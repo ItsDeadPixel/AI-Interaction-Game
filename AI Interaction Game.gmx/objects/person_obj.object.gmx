@@ -3,7 +3,7 @@
   <spriteName>personlooking_spr</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -33,7 +33,6 @@ image_index = choose(0,1);
 
 global.happinesslvl += 1;
 perhappy = 0;
-perhealth = 100;
 </string>
           </argument>
         </arguments>
